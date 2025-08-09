@@ -16,14 +16,9 @@ mirror_to_github:
 
   script:
     - echo "Start mirror push to GitHub"
-
     - git config --global credential.helper ""
-
     # 添加 GitHub 远程仓库，带 token 认证
     - git remote add github https://$GITHUB_TOKEN@github.com/rabbitsaviola/test2.git
-
     # 推送 main 分支到 GitHub
     - git push --force --mirror github
 
-  only:
-    - main
