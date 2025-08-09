@@ -7,6 +7,8 @@ variables:
 
 mirror_to_github:
   stage: mirror
+  tags:
+    - docker
   script:
     - echo "Start mirror push to GitHub"
 
