@@ -20,5 +20,5 @@ mirror_to_github:
     # 添加 GitHub 远程仓库，带 token 认证
     - git remote add github https://$GITHUB_TOKEN@github.com/rabbitsaviola/test2.git
     # 推送到 GitHub
-    - git push --force --mirror github
+    - git push github refs/remotes/origin/*:refs/heads/*
 
