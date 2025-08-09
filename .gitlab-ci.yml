@@ -2,7 +2,7 @@ stages:
   - mirror
 
 variables:
-  GIT_STRATEGY: fetch  # 避免全量 clone，提高速度
+  GIT_STRATEGY: fetch  # 避免全量 clone，提高速度,ssss
   GIT_SSL_NO_VERIFY: "true"
 
 mirror_to_github:
