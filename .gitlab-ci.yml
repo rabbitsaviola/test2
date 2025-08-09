@@ -7,8 +7,13 @@ variables:
 
 mirror_to_github:
   stage: mirror
+  image: $CI_DOCKER_BASE_REGISTRY:latest
   tags:
     - docker
+  before_script:    
+    - git config --global user.email "$GIT_CI_USER_NAME"
+    - git config --global user.name "$GIT_CI_USER_EMAIL"
+
   script:
     - echo "Start mirror push to GitHub"
 
